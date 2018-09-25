@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Choose avatar opdracht Copernica frontend</title>
     <link rel="stylesheet" type="text/css" href="./includes/css/style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="./includes/js/avatarPicker.js"></script>
 
@@ -14,66 +12,22 @@
 
 </head>
 <body>
-<div id="workSpace">
-    <img id="avatarView" class="img-circle"/>
-
-    <!-- choose avatar modal -->
-    <div class="modal"  id="avatarsSpace" style="display: none;">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div id="triangle"></div>
-                </div>
-                <div class="modal-body">
-                    <p class="title">choose your avatar</p>
-                    <div id="thumbnailsContainer"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-</div>
+<div id="workSpace"></div>
 </body>
 
 <script type="text/javascript">
-
     $( document ).ready(function() {
 
-        var availableAvatars = [
-            { "src": "./includes/images/img6.png", "id": 1 },
-            { "src": "./includes/images/img5.png", "id": 2 },
-            { "src": "./includes/images/img4.png", "id": 3 },
-            { "src": "./includes/images/img3.png", "id": 4 },
-            { "src": "./includes/images/img2.png", "id": 5 },
-            { "src": "./includes/images/img1.png", "id": 6 }
-        ];
+        /*
 
-        var defaultAvatarId=  Cookies.get("currentAvatar") != undefined ? Cookies.get("currentAvatar") : 1;
+         $('#avatarView').on("click", function() {
+         $('#workSpace').avatarPicker("open", $('#avatarView').data('id'));
+         })
 
-        var currentAvatarObj = availableAvatars.find( function (x) { return x.id == defaultAvatarId } );
-
-        $('#avatarView').data("id", currentAvatarObj.id).attr("src", currentAvatarObj.src);
-
+*/
         $('#workSpace').avatarPicker({
-                avatarList: availableAvatars,
-                currentAvatarId: defaultAvatarId,
-                previewContainer: 'avatarView',
-                thumbnailsContainer: 'thumbnailsContainer'
-
-        });
-
-
-       $('#avatarView').on("click", function() {
-           $('#workSpace').avatarPicker("open", $('#avatarView').data('id'));
-       })
+                placeholder: "choose your avatar"}
+            );
     });
-
-
-
-
 </script>
 </html>
