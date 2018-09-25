@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose avatar opdracht Copernica frontend</title>
+    <link rel="stylesheet" type="text/css" href="./includes/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="./includes/js/avatarPicker.js"></script>
+
+
+
+</head>
+<body>
+<div id="workSpace"></div>
+</body>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+
+        /*
+
+         $('#avatarView').on("click", function() {
+         $('#workSpace').avatarPicker("open", $('#avatarView').data('id'));
+         })
+
+*/
+        $('#workSpace').avatarPicker({
+                placeholder: "choose your avatar"}
+            );
+    });
+</script>
+</html>
